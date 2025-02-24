@@ -1,0 +1,10 @@
+# services/cubeos-service/Dockerfile
+FROM rust:1.70 as builder
+WORKDIR /usr/src/cubeos-service
+COPY . .
+RUN cargo build --release --bin cubeos-service
+
+FROM debian:buster-slim
+WORKDIR /app
+COPY --from=builder /usr/src/cubeos-service/target/release/cubeos-service /app/
+CMD ["/app/cubeos-service"]

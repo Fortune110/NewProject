@@ -1,0 +1,62 @@
+[package]
+name = "cubeos-service"
+version = "0.4.2"
+authors = ["Patrick Oppel <patrick.oppel94@gmail.com>"]
+edition = "2021"
+repository = "https://github.com/Cube-OS/cubeos-service"
+
+[dependencies]
+cubeos-core = { path = "../../libs/cubeos-core" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+log = "0.4"
+variant_count = "1.1"
+kubos-system = { git = "ssh://git@github.com/Cube-OS/kubos-system.git", branch = "main" }
+bincode = { git = "ssh://git@github.com/Cube-OS/bincode.git", branch = "main" }
+udp-rs = { git = "ssh://git@github.com/Cube-OS/udp-rs.git", branch = "main" }
+failure = "0.1.8"
+serial = "0.4.0"
+uart-rs = { git = "ssh://git@github.com/Cube-OS/uart-rs.git", branch = "main" }
+syslog = "7.0.0"
+lazy_static = "1.4.0"
+
+[dev-dependencies]
+# Add any development dependencies if needed (e.g., for testing)
+
+[features]
+default = []
+terminal = ['strum', 'strum_macros', 'dialoguer', 'terminal-macro']
+nix = ["dep:nix"]
+diesel = ["dep:diesel", "dep:cubeos-telemetry-db"]
+debug = []
+
+[dependencies.nix]
+version = "0.29.0"
+optional = true
+
+[dependencies.cubeos-telemetry-db]
+git = "ssh://git@github.com/Cube-OS/cubeos-telemetry-db.git"
+branch = "main"
+optional = true
+
+[dependencies.diesel]
+version = "2.0"
+features = ["sqlite"]
+optional = true
+
+[dependencies.dialoguer]
+version = "0.11.0"
+optional = true
+
+[dependencies.strum]
+version = "0.27.1"
+optional = true
+
+[dependencies.strum_macros]
+version = "0.27.1"
+optional = true
+
+[dependencies.terminal-macro]
+git = "ssh://git@github.com/Cube-OS/terminal-macro.git"
+branch = "main"
+optional = true

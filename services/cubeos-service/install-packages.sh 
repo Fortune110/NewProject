@@ -1,0 +1,4 @@
+#!/bin/bash
+# services/cubeos-service/install-packages.sh
+echo "Installing cubeos-service dependencies..."
+cargo build --bin cubeos-service

@@ -1,0 +1,11 @@
+# Example Dockerfile for the workspace (adjust based on Cube-OS requirements)
+FROM rust:1.70 as builder
+WORKDIR /usr/src/cubeos
+COPY . .
+RUN cargo build --release
+
+FROM debian:buster-slim
+WORKDIR /app
+COPY --from=builder /usr/src/cubeos/target/release/cubeos-app /app/
+COPY --from=builder /usr/src/cubeos/target/release/cubeos-service /app/
+CMD ["/app/cubeos-app"]

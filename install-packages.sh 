@@ -1,0 +1,15 @@
+#!/bin/bash
+# Example script to install dependencies for Cube-OS
+echo "Installing Cube-OS dependencies..."
+
+# Install Rust if not installed
+if ! command -v rustc &> /dev/null; then
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    source "$HOME/.cargo/env"
+fi
+
+# Install system dependencies (adjust for your OS, e.g., Ubuntu/Debian)
+sudo apt-get update && sudo apt-get install -y build-essential pkg-config libssl-dev
+
+# Build the project
+cargo build

@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "libs/cubeos-core",
+    "services/cubeos-app",
+    "services/cubeos-service",
+]
+resolver = "2"

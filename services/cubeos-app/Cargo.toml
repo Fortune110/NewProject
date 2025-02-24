@@ -1,0 +1,17 @@
+[package]
+name = "cubeos-app"
+version = "0.1.0"
+edition = "2021"
+authors = ["Patrick Oppel <patrick.oppel94@gmail.com>"]
+repository = "https://github.com/Cube-OS/cubeos-service"
+
+[dependencies]
+log = "0.4"
+cubeos-core = { path = "../../libs/cubeos-core" }
+cubeos-service = { path = "../cubeos-service" }
+gpio = "0.4"
+lazy_static = "1.4"
+
+[features]
+default = ["app"]
+app = []

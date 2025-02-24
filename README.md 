@@ -1,0 +1,10 @@
+# CubeOS Workspace
+This is the root directory for the CubeOS project, containing shared libraries and services for the Cube-OS Linux ecosystem.
+
+## Structure
+- `libs/cubeos-core`: Shared library for CubeOS components.
+- `services/cubeos-app`: Application crate for CubeOS apps.
+- `services/cubeos-service`: Service crate for CubeOS services.
+
+## Building
+Run `cargo build` in this directory to build all crates in the workspace.
