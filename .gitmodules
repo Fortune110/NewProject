@@ -1,3 +1,6 @@
 [submodule "Service"]
 	path = Service
 	url = https://github.com/Cube-OS/cubeos-service
+[submodule "Api"]
+	path = Api
+	url = git@github.com:Cube-OS/cubeos-service.git
