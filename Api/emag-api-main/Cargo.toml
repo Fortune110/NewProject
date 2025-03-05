@@ -1,0 +1,24 @@
+[package]
+name = "emag-api"
+version = "0.1.0"
+authors = ["BH Cho <byunghoon.cho@gmail.com>, XL Bai <xbai9225@gmail.com>"]
+edition = "2018"
+
+# [dependencies]
+# serde = "1.0"
+# bincode = "1.0"
+# failure = "0.1.8"
+# i2c-rs = { git = "ssh://git@github.com/Cube-OS/i2c-rs", rev = "14617ca" }
+# # i2c-rs = { path = "../../i2c-rs" }
+# strum = "0.24"
+# strum_macros = "0.24"
+
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_derive = "1.0"
+bincode = "1.0"
+failure = "0.1.8"
+i2c-rs = { git = "ssh://git@github.com/Cube-OS/i2c-rs", rev = "14617ca" }
+strum = "0.24"
+strum_macros = "0.24"
