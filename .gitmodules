@@ -1,9 +1,9 @@
-[submodule "API/Cubeads_api.git"]
-    path = API/Cubeads_api.git
+[submodule "Api/Cubeads_api.git"]
+	path = Api/Cubeads_api.git
     url = git@github.com:Fortune110/CubeOS-NewApi.git
 
-[submodule "API/eps_api.git"]
-    path = API/eps_api.git
+[submodule "Api/eps_api.git"]
+	path = Api/eps_api.git
     url = git@github.com:Cube-OS/isis-eps-api.git
 
 [submodule "Service/CubeOS.git"]
