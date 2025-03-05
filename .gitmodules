@@ -13,3 +13,12 @@
 [submodule "Service/eps_service.git"]
     path = Service/eps_service.git
     url = git@github.com:Cube-OS/isis-eps-api.git
+[submodule "Api/epm-app"]
+	path = Api/epm-app
+	url = git@github.com:Cube-OS/epm-app.git
+[submodule "Service/emag-service"]
+	path = Service/emag-service
+	url = git@github.com:Cube-OS/emag-service.git
+[submodule "Api/example-api"]
+	path = Api/example-api
+	url = git@github.com:Cube-OS/example-api.git
