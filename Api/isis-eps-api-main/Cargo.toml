@@ -1,0 +1,21 @@
+[package]
+name = "isis-eps-api"
+version = "0.1.2"
+edition = "2021"
+repository = "https://github.com/Cube-OS/isis-eps-api"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = "1.0"
+serde_json = "1.0"
+failure = "0.1.2"
+cubeos-service = { version = "0.4.2", registry = "cube-os" }
+i2c-rs = { version = "0.2.0", registry = "cube-os" }
+strum = "0.24"
+strum_macros = "0.24"
+
+[features]
+default = ['cubeos-service/default']
+terminal = ['cubeos-service/terminal']
+debug = ['cubeos-service/debug']
