@@ -22,3 +22,15 @@
 [submodule "Api/example-api"]
 	path = Api/example-api
 	url = git@github.com:Cube-OS/example-api.git
+[submodule "system-api"]
+	path = system-api
+	url = https://github.com/Cube-OS/system-api.git
+[submodule "example-api"]
+	path = example-api
+	url = https://github.com/Cube-OS/example-api.git
+[submodule "telemetry-db-api"]
+	path = telemetry-db-api
+	url = https://github.com/Cube-OS/telemetry-db-api.git
+[submodule "isis-eps-api"]
+	path = isis-eps-api
+	url = https://github.com/Cube-OS/isis-eps-api.git
