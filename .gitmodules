@@ -76,3 +76,18 @@
 [submodule "Api/iobc-supervisor-api-rs"]
 	path = Api/iobc-supervisor-api-rs
 	url = git@github.com:Cube-OS/iobc-supervisor-api-rs.git
+[submodule "Api/gps-mission-api"]
+	path = Api/gps-mission-api
+	url = git@github.com:Cube-OS/gps-mission-api.git
+[submodule "Api/space-edge-api"]
+	path = Api/space-edge-api
+	url = git@github.com:Cube-OS/space-edge-api.git
+[submodule "Api/rush-api"]
+	path = Api/rush-api
+	url = git@github.com:Cube-OS/rush-api.git
+[submodule "Api/gomspace-p31u-api"]
+	path = Api/gomspace-p31u-api
+	url = git@github.com:Cube-OS/gomspace-p31u-api.git
+[submodule "Api/isti_api"]
+	path = Api/isti_api
+	url = git@github.com:Cube-OS/isti_api.git
