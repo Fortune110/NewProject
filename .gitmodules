@@ -1,5 +1,5 @@
 [submodule "Api/Cubeads_api"]
-	path = Api/Cubeads_api.git
+	path = Api/Cubeads_api
     url = git@github.com:Fortune110/CubeOS-NewApi.git
 
 [submodule "Api/eps_api.git"]
