@@ -1,4 +1,4 @@
-[submodule "Api/Cubeads_api.git"]
+[submodule "Api/Cubeads_api"]
 	path = Api/Cubeads_api.git
     url = git@github.com:Fortune110/CubeOS-NewApi.git
 
