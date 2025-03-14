@@ -55,3 +55,24 @@
 [submodule "Api/shell-cmd-api"]
 	path = Api/shell-cmd-api
 	url = git@github.com:Cube-OS/shell-cmd-api.git
+[submodule "Api/eddi-api"]
+	path = Api/eddi-api
+	url = git@github.com:Cube-OS/eddi-api.git
+[submodule "Api/radiation-counter-api"]
+	path = Api/radiation-counter-api
+	url = git@github.com:Cube-OS/radiation-counter-api.git
+[submodule "Api/iobc-supervisor-api"]
+	path = Api/iobc-supervisor-api
+	url = git@github.com:Cube-OS/iobc-supervisor-api.git
+[submodule "Api/isis-ants-api"]
+	path = Api/isis-ants-api
+	url = git@github.com:Cube-OS/isis-ants-api.git
+[submodule "Api/cubeadcs-app-api"]
+	path = Api/cubeadcs-app-api
+	url = git@github.com:Cube-OS/cubeadcs-app-api.git
+[submodule "Api/cxt-payload-api"]
+	path = Api/cxt-payload-api
+	url = git@github.com:Cube-OS/cxt-payload-api.git
+[submodule "Api/iobc-supervisor-api-rs"]
+	path = Api/iobc-supervisor-api-rs
+	url = git@github.com:Cube-OS/iobc-supervisor-api-rs.git
