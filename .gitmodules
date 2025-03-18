@@ -76,3 +76,6 @@
 [submodule "Service/rush-service"]
 	path = Service/rush-service
 	url = git@github.com:Cube-OS/rush-service.git
+[submodule "Service/sband-radio-service"]
+	path = Service/sband-radio-service
+	url = git@github.com:Cube-OS/sband-radio-service.git
