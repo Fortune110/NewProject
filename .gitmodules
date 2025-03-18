@@ -49,3 +49,6 @@
 [submodule "Service/example-service"]
     path = Service/example-service
     url = git@github.com:Cube-OS/example-service.git    
+[submodule "Service/radiation-counter-service"]
+	path = Service/radiation-counter-service
+	url = git@github.com:Cube-OS/radiation-counter-service.git
