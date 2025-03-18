@@ -82,3 +82,6 @@
 [submodule "Service/gps-missions-service"]
 	path = Service/gps-missions-service
 	url = git@github.com:Cube-OS/gps-missions-service.git
+[submodule "Service/isti_service"]
+	path = Service/isti_service
+	url = git@github.com:Cube-OS/isti_service.git
