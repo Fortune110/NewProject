@@ -23,8 +23,8 @@
     url = git@github.com:Cube-OS/emag-service.git
 
 [submodule "Service/file-service"]
-    path = Service/file-service
-    url = git@github.com:Cube-OS/file-service.git
+	path = Service/file-service
+	url = git@github.com:Cube-OS/file-service.git
 
 [submodule "Service/iobc-supervisor-service"]
     path = Service/iobc-supervisor-service
