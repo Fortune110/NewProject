@@ -43,8 +43,8 @@
 	url = git@github.com:Cube-OS/comms-service.git
 
 [submodule "Service/monitor-service"]
-    path = Service/monitor-service
-    url = git@github.com:Cube-OS/monitor-service.git
+	path = Service/monitor-service
+	url = git@github.com:Cube-OS/monitor-service.git
 
 [submodule "Service/example-service"]
     path = Service/example-service
