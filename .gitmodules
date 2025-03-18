@@ -1,17 +1,17 @@
-[submodule "Api/Cubeads_api.git"]
-    path = Api/Cubeads_api.git
+[submodule "Api/Cubeads_api"]
+    path = Api/Cubeads_api
     url = git@github.com:Fortune110/CubeOS-NewApi.git
 
-[submodule "Api/eps_api.git"]
-    path = Api/eps_api.git
+[submodule "Api/eps_api"]
+    path = Api/eps_api
     url = git@github.com:Cube-OS/isis-eps-api.git
 
-[submodule "Service/CubeOS.git"]
-    path = Service/CubeOS.git
+[submodule "Service/CubeOS"]
+    path = Service/CubeOS
     url = git@github.com:Cube-OS/cubeos-service.git
 
-[submodule "Service/eps_service.git"]
-    path = Service/eps_service.git
+[submodule "Service/eps_service"]
+    path = Service/eps_service
     url = git@github.com:Cube-OS/isis-eps-api.git
 
 [submodule "Service/cubeadcs-service"]
@@ -48,4 +48,4 @@
 
 [submodule "Service/example-service"]
     path = Service/example-service
-    url = git@github.com:Cube-OS/example-service.git
+    url = git@github.com:Cube-OS/example-service.git    
