@@ -39,8 +39,8 @@
 	url = git@github.com:Cube-OS/isis-ants-service.git
 
 [submodule "Service/comms-service"]
-    path = Service/comms-service
-    url = git@github.com:Cube-OS/comms-service.git
+	path = Service/comms-service
+	url = git@github.com:Cube-OS/comms-service.git
 
 [submodule "Service/monitor-service"]
     path = Service/monitor-service
