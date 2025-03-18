@@ -15,8 +15,8 @@
     url = git@github.com:Cube-OS/isis-eps-api.git
 
 [submodule "Service/cubeadcs-service"]
-    path = Service/cubeadcs-service
-    url = git@github.com:Cube-OS/cubeadcs-service.git
+	path = Service/cubeadcs-service
+	url = git@github.com:Cube-OS/cubeadcs-service.git
 
 [submodule "Service/emag-service"]
     path = Service/emag-service
