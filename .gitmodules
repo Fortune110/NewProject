@@ -58,3 +58,6 @@
 [submodule "Service/app-service"]
 	path = Service/app-service
 	url = git@github.com:Cube-OS/app-service.git
+[submodule "Service/scheduler-service"]
+	path = Service/scheduler-service
+	url = git@github.com:Cube-OS/scheduler-service.git
