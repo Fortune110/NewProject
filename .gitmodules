@@ -67,3 +67,6 @@
 [submodule "Service/isis-eps-service"]
 	path = Service/isis-eps-service
 	url = git@github.com:Cube-OS/isis-eps-service.git
+[submodule "Service/telemetry-service"]
+	path = Service/telemetry-service
+	url = git@github.com:Cube-OS/telemetry-service.git
