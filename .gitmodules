@@ -27,8 +27,8 @@
 	url = git@github.com:Cube-OS/file-service.git
 
 [submodule "Service/iobc-supervisor-service"]
-    path = Service/iobc-supervisor-service
-    url = git@github.com:Cube-OS/iobc-supervisor-service.git
+	path = Service/iobc-supervisor-service
+	url = git@github.com:Cube-OS/iobc-supervisor-service.git
 
 [submodule "Service/isis-trxvu-service"]
     path = Service/isis-trxvu-service
