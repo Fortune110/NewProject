@@ -55,3 +55,6 @@
 [submodule "Service/shell-cmd-service"]
 	path = Service/shell-cmd-service
 	url = git@github.com:Cube-OS/shell-cmd-service.git
+[submodule "Service/app-service"]
+	path = Service/app-service
+	url = git@github.com:Cube-OS/app-service.git
