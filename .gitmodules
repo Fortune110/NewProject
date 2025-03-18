@@ -73,3 +73,6 @@
 [submodule "Service/gomspace-p31u-service"]
 	path = Service/gomspace-p31u-service
 	url = git@github.com:Cube-OS/gomspace-p31u-service.git
+[submodule "Service/rush-service"]
+	path = Service/rush-service
+	url = git@github.com:Cube-OS/rush-service.git
