@@ -64,3 +64,6 @@
 [submodule "Service/eddi-service"]
 	path = Service/eddi-service
 	url = git@github.com:Cube-OS/eddi-service.git
+[submodule "Service/isis-eps-service"]
+	path = Service/isis-eps-service
+	url = git@github.com:Cube-OS/isis-eps-service.git
