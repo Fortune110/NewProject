@@ -52,3 +52,6 @@
 [submodule "Service/radiation-counter-service"]
 	path = Service/radiation-counter-service
 	url = git@github.com:Cube-OS/radiation-counter-service.git
+[submodule "Service/shell-cmd-service"]
+	path = Service/shell-cmd-service
+	url = git@github.com:Cube-OS/shell-cmd-service.git
