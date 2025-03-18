@@ -61,3 +61,6 @@
 [submodule "Service/scheduler-service"]
 	path = Service/scheduler-service
 	url = git@github.com:Cube-OS/scheduler-service.git
+[submodule "Service/eddi-service"]
+	path = Service/eddi-service
+	url = git@github.com:Cube-OS/eddi-service.git
