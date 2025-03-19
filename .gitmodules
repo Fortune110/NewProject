@@ -110,3 +110,6 @@
 [submodule "Api/iobc-supervisor-api"]
 	path = Api/iobc-supervisor-api
 	url = git@github.com:Cube-OS/iobc-supervisor-api.git
+[submodule "Api/isis-ants-api"]
+	path = Api/isis-ants-api
+	url = git@github.com:Cube-OS/isis-ants-api.git
