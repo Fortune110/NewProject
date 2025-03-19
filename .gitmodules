@@ -98,3 +98,6 @@
 [submodule "Api/isis-trxvu-api"]
 	path = Api/isis-trxvu-api
 	url = git@github.com:Cube-OS/isis-trxvu-api.git
+[submodule "Api/shell-cmd-api"]
+	path = Api/shell-cmd-api
+	url = git@github.com:Cube-OS/shell-cmd-api.git
