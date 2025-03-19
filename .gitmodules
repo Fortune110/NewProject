@@ -86,3 +86,6 @@
 [submodule "Api/isis-eps-api"]
 	path = Api/isis-eps-api
 	url = git@github.com:Cube-OS/isis-eps-api.git
+[submodule "Api/telemetry-db-api"]
+	path = Api/telemetry-db-api
+	url = git@github.com:Cube-OS/telemetry-db-api.git
