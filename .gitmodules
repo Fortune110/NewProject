@@ -122,3 +122,6 @@
 [submodule "Api/iobc-supervisor-api-rs"]
 	path = Api/iobc-supervisor-api-rs
 	url = git@github.com:Cube-OS/iobc-supervisor-api-rs.git
+[submodule "Api/gps-mission-api"]
+	path = Api/gps-mission-api
+	url = git@github.com:Cube-OS/gps-mission-api.git
