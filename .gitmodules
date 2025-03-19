@@ -92,3 +92,6 @@
 [submodule "Api/emag-api"]
 	path = Api/emag-api
 	url = git@github.com:Cube-OS/emag-api.git
+[submodule "Api/cubeadcs-api"]
+	path = Api/cubeadcs-api
+	url = git@github.com:Cube-OS/cubeadcs-api.git
