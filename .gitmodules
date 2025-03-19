@@ -83,3 +83,6 @@
 [submodule "Api/example-api"]
 	path = Api/example-api
 	url = git@github.com:Cube-OS/example-api.git
+[submodule "Api/isis-eps-api"]
+	path = Api/isis-eps-api
+	url = git@github.com:Cube-OS/isis-eps-api.git
