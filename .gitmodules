@@ -95,3 +95,6 @@
 [submodule "Api/cubeadcs-api"]
 	path = Api/cubeadcs-api
 	url = git@github.com:Cube-OS/cubeadcs-api.git
+[submodule "Api/isis-trxvu-api"]
+	path = Api/isis-trxvu-api
+	url = git@github.com:Cube-OS/isis-trxvu-api.git
