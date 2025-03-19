@@ -101,3 +101,6 @@
 [submodule "Api/shell-cmd-api"]
 	path = Api/shell-cmd-api
 	url = git@github.com:Cube-OS/shell-cmd-api.git
+[submodule "Api/eddi-api"]
+	path = Api/eddi-api
+	url = git@github.com:Cube-OS/eddi-api.git
