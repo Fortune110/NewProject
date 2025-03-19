@@ -134,3 +134,6 @@
 [submodule "Api/gomspace-p31u-api"]
 	path = Api/gomspace-p31u-api
 	url = git@github.com:Cube-OS/gomspace-p31u-api.git
+[submodule "Api/isti_api"]
+	path = Api/isti_api
+	url = git@github.com:Cube-OS/isti_api.git
