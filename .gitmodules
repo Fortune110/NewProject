@@ -119,3 +119,6 @@
 [submodule "Api/cxt-payload-api"]
 	path = Api/cxt-payload-api
 	url = git@github.com:Cube-OS/cxt-payload-api.git
+[submodule "Api/iobc-supervisor-api-rs"]
+	path = Api/iobc-supervisor-api-rs
+	url = git@github.com:Cube-OS/iobc-supervisor-api-rs.git
