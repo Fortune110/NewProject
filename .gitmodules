@@ -77,3 +77,6 @@
 [submodule "Service/isti_service"]
 	path = Service/isti_service
 	url = git@github.com:Cube-OS/isti_service.git
+[submodule "Api/system-api"]
+	path = Api/system-api
+	url = git@github.com:Cube-OS/system-api.git
