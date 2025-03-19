@@ -1,0 +1,2 @@
+[registries]
+cube-os = { index = "https://github.com/Cube-OS/crates.git" }
