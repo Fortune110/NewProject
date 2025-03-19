@@ -107,3 +107,6 @@
 [submodule "Api/radiation-counter-api"]
 	path = Api/radiation-counter-api
 	url = git@github.com:Cube-OS/radiation-counter-api.git
+[submodule "Api/iobc-supervisor-api"]
+	path = Api/iobc-supervisor-api
+	url = git@github.com:Cube-OS/iobc-supervisor-api.git
