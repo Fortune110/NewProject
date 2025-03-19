@@ -128,3 +128,6 @@
 [submodule "Api/space-edge-api"]
 	path = Api/space-edge-api
 	url = git@github.com:Cube-OS/space-edge-api.git
+[submodule "Api/rush-api"]
+	path = Api/rush-api
+	url = git@github.com:Cube-OS/rush-api.git
