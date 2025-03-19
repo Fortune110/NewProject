@@ -104,3 +104,6 @@
 [submodule "Api/eddi-api"]
 	path = Api/eddi-api
 	url = git@github.com:Cube-OS/eddi-api.git
+[submodule "Api/radiation-counter-api"]
+	path = Api/radiation-counter-api
+	url = git@github.com:Cube-OS/radiation-counter-api.git
