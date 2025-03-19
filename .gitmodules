@@ -89,3 +89,6 @@
 [submodule "Api/telemetry-db-api"]
 	path = Api/telemetry-db-api
 	url = git@github.com:Cube-OS/telemetry-db-api.git
+[submodule "Api/emag-api"]
+	path = Api/emag-api
+	url = git@github.com:Cube-OS/emag-api.git
