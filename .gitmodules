@@ -116,3 +116,6 @@
 [submodule "Api/cubeadcs-app-api"]
 	path = Api/cubeadcs-app-api
 	url = git@github.com:Cube-OS/cubeadcs-app-api.git
+[submodule "Api/cxt-payload-api"]
+	path = Api/cxt-payload-api
+	url = git@github.com:Cube-OS/cxt-payload-api.git
