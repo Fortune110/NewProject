@@ -125,3 +125,6 @@
 [submodule "Api/gps-mission-api"]
 	path = Api/gps-mission-api
 	url = git@github.com:Cube-OS/gps-mission-api.git
+[submodule "Api/space-edge-api"]
+	path = Api/space-edge-api
+	url = git@github.com:Cube-OS/space-edge-api.git
