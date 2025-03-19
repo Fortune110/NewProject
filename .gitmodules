@@ -131,3 +131,6 @@
 [submodule "Api/rush-api"]
 	path = Api/rush-api
 	url = git@github.com:Cube-OS/rush-api.git
+[submodule "Api/gomspace-p31u-api"]
+	path = Api/gomspace-p31u-api
+	url = git@github.com:Cube-OS/gomspace-p31u-api.git
