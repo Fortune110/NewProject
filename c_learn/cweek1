@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int abc = 8;          // 声明一个整型变量 abc，值为 8
+
+    int *ptr = &abc;      // 声明一个指针 ptr，并将 abc 的地址赋给它
+
+    // 现在：
+    // abc 表示变量本身，值为 8
+    // &abc 表示 abc 的地址
+    // ptr 表示存储了 abc 地址的指针
+    // *ptr 表示解引用 ptr，得到它指向的地址中存储的值，也就是 8
+
+    printf("abc 的值：%d\n", abc);       // 输出 8
+    printf("abc 的地址：%p\n", (void *)&abc);  // 输出 abc 的地址
+    printf("ptr 存储的地址：%p\n", (void *)ptr); // 输出与 &abc 相同的地址
+    printf("*ptr 的值：%d\n", *ptr);     // 输出 8
+
+    // 如果尝试写 *abc 则会出错，因为 abc 不是指针
+    // 例如下面的代码会编译出错：
+    // int value = *abc;  // 错误：不能对一个非指针变量进行解引用
+
+    return 0;
+}
