@@ -1,0 +1,8 @@
+[package]
+name = "NewProject"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+[dev-dependencies]
+mockall = "0.11.3"
