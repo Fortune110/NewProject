@@ -140,3 +140,6 @@
 [submodule "Api/epm-app"]
 	path = Api/epm-app
 	url = git@github.com:Cube-OS/epm-app.git
+[submodule "Api/Cubeads_api"]
+	path = Api/Cubeads_api
+	url = git@github.com:Cube-OS/cubeadcs-api.git
