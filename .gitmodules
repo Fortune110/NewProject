@@ -137,3 +137,6 @@
 [submodule "Api/isti_api"]
 	path = Api/isti_api
 	url = git@github.com:Cube-OS/isti_api.git
+[submodule "Api/epm-app"]
+	path = Api/epm-app
+	url = git@github.com:Cube-OS/epm-app.git
