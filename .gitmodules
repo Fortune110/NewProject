@@ -140,3 +140,6 @@
 [submodule "Api/epm-app"]
 	path = Api/epm-app
 	url = git@github.com:Cube-OS/epm-app.git
+[submodule "Service/cubeos-service"]
+	path = Service/cubeos-service
+	url = git@github.com:Cube-OS/cubeos-service.git
