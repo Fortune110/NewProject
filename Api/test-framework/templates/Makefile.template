@@ -1,0 +1,69 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror -g
+LDFLAGS = -lcmocka
+WRAP_FLAGS = # Add your linker flags for wrapping external functions here
+              # Example: -Wl,--wrap=i2c_open -Wl,--wrap=i2c_close
+
+# Module name and file naming
+MODULE_NAME = TEMPLATE_MODULE
+MODULE_NAME_UNDERSCORE = $(shell echo $(MODULE_NAME) | sed 's/-/_/g')
+TEST_NAME = test_$(MODULE_NAME_UNDERSCORE)
+MOCK_NAME = mock_$(MODULE_NAME_UNDERSCORE)
+
+# Source and build directories
+SRC_DIR = .
+BUILD_DIR = build
+TEST_BINARY = $(BUILD_DIR)/$(TEST_NAME)
+
+# Source files - add any additional mock files here
+TEST_SRCS = $(SRC_DIR)/$(TEST_NAME).c \
+            $(SRC_DIR)/$(MOCK_NAME).c \
+            # Add any additional source files here
+
+# Object files
+TEST_OBJS = $(TEST_SRCS:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
+
+# Include directories - add your API include paths here
+INCLUDES = -I. -I../src
+
+# Default target
+all: $(TEST_BINARY)
+
+# Create build directory
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
+
+# Compile C source files
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c | $(BUILD_DIR)
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
+# Link the test binary
+$(TEST_BINARY): $(TEST_OBJS)
+	$(CC) $(CFLAGS) $(WRAP_FLAGS) -o $@ $^ $(LDFLAGS)
+
+# Run the tests and generate results
+run: $(TEST_BINARY)
+	./$(TEST_BINARY) | tee test-output.txt
+	@grep -o "[0-9]* tests, [0-9]* failed" test-output.txt > test-results.txt
+	@if [ -f gcov-report.txt ]; then \
+		coverage=$$(grep -o "Lines executed:[0-9]*.[0-9]*" gcov-report.txt | cut -d: -f2); \
+		echo "coverage: $$coverage" >> test-results.txt; \
+	else \
+		echo "coverage: 0" >> test-results.txt; \
+	fi
+	@echo "Test results saved to test-results.txt"
+	@cat test-results.txt
+
+# Add code coverage
+coverage: CFLAGS += --coverage
+coverage: LDFLAGS += --coverage
+coverage: clean $(TEST_BINARY) run
+	gcov -o $(BUILD_DIR) $(TEST_SRCS) | tee gcov-report.txt
+	@echo "Coverage reports generated in $(BUILD_DIR)"
+
+# Clean build artifacts
+clean:
+	rm -rf $(BUILD_DIR) *.gcov *.gcda *.gcno test-output.txt test-results.txt gcov-report.txt
+
+# Declare phony targets
+.PHONY: all run clean coverage 

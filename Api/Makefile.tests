@@ -1,0 +1,94 @@
+# Master Makefile for running tests across all API modules
+# Copyright (C) 2023
+
+# List all API modules with tests
+API_MODULES = isis-ants-api \
+              isis-trxvu-api \
+              isis-eps-api \
+              gomspace-p31u-api \
+              # Add more modules as needed
+
+# Colors for pretty output
+GREEN := $(shell tput setaf 2)
+YELLOW := $(shell tput setaf 3)
+RESET := $(shell tput sgr0)
+
+.PHONY: all clean test coverage report $(API_MODULES)
+
+# Default target
+all: $(API_MODULES)
+
+# Clean all test artifacts
+clean:
+	@echo "$(YELLOW)Cleaning all test artifacts...$(RESET)"
+	@for module in $(API_MODULES); do \
+		if [ -d "$$module/tests" ]; then \
+			echo "$(YELLOW)Cleaning $$module tests...$(RESET)"; \
+			$(MAKE) -C $$module/tests clean; \
+		fi; \
+	done
+	@echo "$(GREEN)Clean complete.$(RESET)"
+
+# Build and run tests for all modules
+test: $(API_MODULES)
+	@echo "$(GREEN)All tests completed.$(RESET)"
+
+# Generate test coverage for all modules
+coverage:
+	@echo "$(YELLOW)Generating coverage reports for all modules...$(RESET)"
+	@for module in $(API_MODULES); do \
+		if [ -d "$$module/tests" ]; then \
+			echo "$(YELLOW)Coverage for $$module...$(RESET)"; \
+			$(MAKE) -C $$module/tests coverage; \
+		fi; \
+	done
+	@echo "$(GREEN)Coverage generation complete.$(RESET)"
+
+# Generate combined test report
+report:
+	@echo "$(YELLOW)Generating combined test report...$(RESET)"
+	@mkdir -p test-report
+	@echo "# API Test Report" > test-report/report.md
+	@echo "## Summary" >> test-report/report.md
+	@echo "| Module | Tests Passed | Tests Failed | Coverage |" >> test-report/report.md
+	@echo "|--------|-------------|--------------|----------|" >> test-report/report.md
+	@for module in $(API_MODULES); do \
+		if [ -f "$$module/tests/test-results.txt" ]; then \
+			passed=$$(grep "passed" $$module/tests/test-results.txt | awk '{print $$1}'); \
+			failed=$$(grep "failed" $$module/tests/test-results.txt | awk '{print $$1}'); \
+			coverage=$$(grep "coverage" $$module/tests/test-results.txt | awk '{print $$1"%"}'); \
+			echo "| $$module | $$passed | $$failed | $$coverage |" >> test-report/report.md; \
+		else \
+			echo "| $$module | N/A | N/A | N/A |" >> test-report/report.md; \
+		fi; \
+	done
+	@echo "$(GREEN)Report generated at test-report/report.md$(RESET)"
+
+# Individual module targets
+$(API_MODULES):
+	@if [ -d "$@/tests" ]; then \
+		echo "$(YELLOW)Building and running tests for $@...$(RESET)"; \
+		$(MAKE) -C $@/tests; \
+		$(MAKE) -C $@/tests run; \
+	else \
+		echo "$(YELLOW)No tests found for $@$(RESET)"; \
+	fi
+
+# Create test directory structure for a new API module
+create-test-structure:
+	@if [ -z "$(MODULE)" ]; then \
+		echo "$(YELLOW)Please specify a module with MODULE=<module-name>$(RESET)"; \
+		exit 1; \
+	fi
+	@echo "$(YELLOW)Creating test structure for $(MODULE)...$(RESET)"
+	@mkdir -p $(MODULE)/tests
+	@cp test-framework/templates/Makefile.template $(MODULE)/tests/Makefile
+	@cp test-framework/templates/test_template.c $(MODULE)/tests/test_$(shell echo $(MODULE) | sed 's/-/_/g').c
+	@cp test-framework/templates/mock_template.h $(MODULE)/tests/mock_$(shell echo $(MODULE) | sed 's/-/_/g').h
+	@cp test-framework/templates/mock_template.c $(MODULE)/tests/mock_$(shell echo $(MODULE) | sed 's/-/_/g').c
+	@cp test-framework/templates/README.md.template $(MODULE)/tests/README.md
+	@sed -i 's/TEMPLATE_MODULE/$(MODULE)/g' $(MODULE)/tests/Makefile
+	@sed -i 's/TEMPLATE_MODULE/$(MODULE)/g' $(MODULE)/tests/README.md
+	@sed -i 's/template_module/$(shell echo $(MODULE) | sed 's/-/_/g')/g' $(MODULE)/tests/test_$(shell echo $(MODULE) | sed 's/-/_/g').c
+	@echo "$(GREEN)Test structure created for $(MODULE).$(RESET)"
+	@echo "$(GREEN)You can now customize the files in $(MODULE)/tests/ for your specific module.$(RESET)" 

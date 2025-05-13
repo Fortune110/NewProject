@@ -1,0 +1,60 @@
+# TEMPLATE_MODULE API Tests
+
+This directory contains unit tests for the TEMPLATE_MODULE API. The tests use the CMocka unit testing framework to verify the API's functionality.
+
+## Prerequisites
+
+Before running the tests, you need to install the CMocka testing framework:
+
+```bash
+# Debian/Ubuntu
+sudo apt-get install libcmocka-dev
+
+# Fedora
+sudo dnf install libcmocka-devel
+
+# macOS (using Homebrew)
+brew install cmocka
+```
+
+## Building and Running Tests
+
+To build and run the tests:
+
+```bash
+# Build the tests
+make
+
+# Run the tests
+make run
+
+# Clean build artifacts
+make clean
+
+# Run tests with code coverage
+make coverage
+```
+
+## Test Structure
+
+- `test_*.c`: Main test file containing test cases for the API
+- `mock_*.h/c`: Mock implementation of the external interfaces used by the API
+- `Makefile`: Build configuration for the tests
+
+## Test Coverage
+
+To generate code coverage reports, run:
+
+```bash
+make coverage
+```
+
+This will create `.gcov` files showing line-by-line coverage of the source code.
+
+## Adding New Tests
+
+To add new tests:
+
+1. Add new test functions in the test file following the existing pattern
+2. Add the new test functions to the `tests` array in the `main()` function
+3. Run the tests to verify your changes 
